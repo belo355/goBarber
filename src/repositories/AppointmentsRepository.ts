@@ -4,7 +4,7 @@ import { EntityRepository, Repository, getCustomRepository } from 'typeorm';
 import Appointment from '../models/Appointment';
 
 @EntityRepository(Appointment)
-class AppointmentRepository extends Repository<Appointment> {
+class AppointmentsRepository extends Repository<Appointment> {
 
   /**
    * findByDate - verifica a existencia de appointments com a data informada
@@ -19,4 +19,4 @@ class AppointmentRepository extends Repository<Appointment> {
   }
 }
 
-export default AppointmentRepository;
+export default AppointmentsRepository;
