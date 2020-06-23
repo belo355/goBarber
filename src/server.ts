@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import express from 'express';
 import routes from './routers';
 
-import './database/index';
+import './database/index.ts';
 
 const app = express();
 

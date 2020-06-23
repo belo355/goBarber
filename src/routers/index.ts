@@ -6,7 +6,7 @@ import usersRouters from './users.routes';
 const routes = Router();
 routes.use(express.json());
 
-routes.use("/appoitments", appoitmentRouters);
+routes.use("/appointments", appoitmentRouters);
 routes.use("/users", usersRouters);
 
 

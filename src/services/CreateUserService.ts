@@ -1,6 +1,7 @@
 import User from "../models/User";
 import { getRepository} from 'typeorm';
 
+
 interface RequestDTO {
   name: string;
   email: string;

@@ -7,6 +7,7 @@ import AppointmentRepository from '../repositories/AppointmentsRepository';
 interface RequestDTO {
   provider_id: string;
   date: Date;
+
 }
 
 class CreateAppointmentService {
@@ -22,8 +23,9 @@ class CreateAppointmentService {
     }
 
     const appointment = appointmentsRepository.create({
-      provider_id,
-        date: appointmentDate
+        provider_id,
+        date: appointmentDate,
+
     });
 
     await appointmentsRepository.save(appointment);
