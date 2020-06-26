@@ -10,6 +10,7 @@ const usersRouters = Router();
 usersRouters.get("/", async (request, response) => {
   try {
     const createUser = new getUserService();
+
     const user = createUser.execute();
     return response.json(user);
   } catch (error) {

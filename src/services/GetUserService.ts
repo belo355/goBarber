@@ -8,7 +8,7 @@ interface RequestDTO {
 }
 
 
-//TODO: Resolver getall de usuarios
+//TODO: Resolver get all de usuarios
 class GetUserService {
   public async execute() : Promise<User[]> {
     const usersRepository = getRepository(User);
