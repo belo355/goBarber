@@ -11,6 +11,10 @@ class User{
   @Column()
   password: string;
 
+
+  @Column()
+  avatar: string;
+
   @Column()
   email: string;
 
