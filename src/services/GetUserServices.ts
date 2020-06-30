@@ -6,11 +6,6 @@ class GetUserServices {
     const usersRepository = getRepository(User);
 
     const users = await usersRepository.find();
-
-    //TODO: delete password Users
-    // for(var i = 0 ; i < users.length; i++) {
-    //   // users[i].
-    // }
     return users;
   }
 }

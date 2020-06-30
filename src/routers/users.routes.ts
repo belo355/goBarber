@@ -45,21 +45,14 @@ usersRouters.post("/", async (request, response) => {
 
 usersRouters.patch("/avatar",ensureAuthenticated,upload.single("avatar"),
   async (request, response) => {
-    try {
-      const updateUserAvatar = new UpdateUserAvatarService();
+    const updateUserAvatar = new UpdateUserAvatarService();
 
-      const user = await updateUserAvatar.execute({
-        user_id: request.user.id,
-        avatarFilename: request.file.filename,
-      });
-
-      // console.log(request.file);
-      return response.status(200).json(user);
-
-    } catch (error) {
-      //TODO: AJUSTAR RETORNO DE ERRO AO ATUALIZAR AVATAR DE USUARIO
-      return response.status(400).json({ error: error.message });
-    }
+    const user = await updateUserAvatar.execute({
+      user_id: request.user.id,
+      avatarFilename: request.file.filename,
+    });
+    // console.log(request.file);
+    return response.status(200).json(user);
   },
 );
 
