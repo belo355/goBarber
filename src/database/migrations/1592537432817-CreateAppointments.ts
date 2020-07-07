@@ -1,6 +1,4 @@
 import {MigrationInterface, QueryRunner, Table, Generated} from "typeorm";
-import { query } from "express";
-
 export default class CreateAppointments1592537432817 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {

@@ -14,7 +14,6 @@ interface RequestDTO {
 
 class CreateAppointmentService {
   public async execute({ provider_id, date } : RequestDTO) : Promise<Appointment> {
-
     const appointmentsRepository = getCustomRepository(AppointmentRepository);
 
     const appointmentDate = startOfHour(date);
@@ -34,8 +33,6 @@ class CreateAppointmentService {
 
     return appointment;
   }
-
-
 }
 
 export default CreateAppointmentService;
